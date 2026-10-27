@@ -1,0 +1,9 @@
+{
+    "full_name": "Miguel Otero Pedrido",
+    "package_name": "agent-api",
+    "project_name": "Agent API",
+    "project_slug": "{{ cookiecutter.package_name.replace('-', '_') }}",
+    "project_short_description": "This is a template for creating powerful Agent APIs.",
+    "first_version": "0.1.0"
+  }
+  

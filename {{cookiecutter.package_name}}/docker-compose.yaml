@@ -1,0 +1,19 @@
+services:
+  agent-api:
+    container_name: {{ cookiecutter.package_name }}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    networks:
+      - {{ cookiecutter.package_name }}-network
+
+volumes:
+  data:
+
+networks:
+  {{ cookiecutter.package_name }}-network:
+    name: {{ cookiecutter.package_name }}-network
