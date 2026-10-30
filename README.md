@@ -94,7 +94,7 @@ The layering is the point: dependencies flow **infrastructure → application �
   - `prompts/` system prompts · `tools/` functions the agent can call · `memory/` conversation state · `exceptions.py`, `utils.py`.
 - **`application/`** — one sub-folder per use case (chat, evaluation, document ingestion, memory reset). Orchestrates domain pieces (e.g. the LangGraph graph lives in `chat_service/`).
 - **`infrastructure/`** — everything that talks to the outside world.
-  - `api/` FastAPI routes + request/response models · `llm_providers/` OpenAI/Groq/etc. clients · `db/` vector store / SQL · `mcp_clients/` MCP servers · `monitoring/` Opik/Langfuse/logging.
+  - `api/` FastAPI routes + request/response models · `llm_providers/` OpenAI/Groq/etc. clients · `db/` vector store / SQL · `mcp_clients/` MCP servers.
 - **`config.py`** — settings loaded from `.env` via pydantic-settings.
 - **`data/`, `notebooks/`, `static/`** — non-code assets, kept out of `src/`.
 
@@ -137,6 +137,3 @@ Things I've hit and should fix once here instead of in every project:
 - The root `pyproject.toml`, `main.py`, `Pipfile` and `uv.lock` belong to the template repo itself (its own dev tooling), not to generated projects.
 - Test changes by generating into a throwaway dir **outside** this repo: `cookiecutter . --no-input -o /tmp/test-out`, then inspect and delete it.
 
-## License
-
-MIT — see [LICENSE](LICENSE).
