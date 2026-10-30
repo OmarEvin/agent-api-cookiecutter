@@ -1,7 +1,6 @@
 # 🍪 Agent API Cookiecutter
 
 My base template for new AI agent projects (FastAPI + clean/layered architecture, Docker, uv, ruff, pytest).
-Forked from [neural-maze/agent-api-cookiecutter](https://github.com/neural-maze/agent-api-cookiecutter) — upstream credit to Miguel Otero Pedrido.
 
 > **This repo is a template, not a runnable project.** Never edit code inside `{{cookiecutter.package_name}}/` expecting to run it — generate a project first, then work in the generated copy.
 
@@ -135,9 +134,8 @@ Things I've hit and should fix once here instead of in every project:
 
 - Files under `{{cookiecutter.package_name}}/` are **Jinja templates**. `{{ cookiecutter.x }}` is replaced at generation time; a literal `{{`/`{%` in the file (e.g. GitHub Actions `${{ ... }}`) must be wrapped in `{% raw %}...{% endraw %}`.
 - `hooks/pre_gen_project.py` validates input before anything is written; `hooks/post_gen_project.py` runs after.
-- The root `pyproject.toml`, `main.py`, `Pipfile` and `uv.lock` belong to the template repo itself (upstream's dev tooling), not to generated projects.
+- The root `pyproject.toml`, `main.py`, `Pipfile` and `uv.lock` belong to the template repo itself (its own dev tooling), not to generated projects.
 - Test changes by generating into a throwaway dir **outside** this repo: `cookiecutter . --no-input -o /tmp/test-out`, then inspect and delete it.
-- To pull upstream improvements: `git remote add upstream https://github.com/neural-maze/agent-api-cookiecutter.git && git fetch upstream && git merge upstream/main --allow-unrelated-histories`.
 
 ## License
 

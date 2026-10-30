@@ -8,4 +8,4 @@
 
 ## Credits
 
-This package was created with [Cookiecutter](https://github.com/audreyfeldroy/cookiecutter) and the [agent-api-cookiecutter](https://github.com/neural-maze/agent-api-cookiecutter) project template.
+This package was created with [Cookiecutter](https://github.com/audreyfeldroy/cookiecutter) and the `agent-api-cookiecutter` project template.

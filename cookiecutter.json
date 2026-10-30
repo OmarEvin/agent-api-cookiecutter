@@ -1,5 +1,5 @@
 {
-    "full_name": "Miguel Otero Pedrido",
+    "full_name": "Omar Belkasseh",
     "package_name": "agent-api",
     "project_name": "Agent API",
     "project_slug": "{{ cookiecutter.package_name.replace('-', '_') }}",

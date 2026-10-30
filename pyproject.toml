@@ -21,7 +21,7 @@ test = [
 ]
 
 [project.urls]
-homepage = "https://github.com/neural-maze/agent-api-cookiecutter"
+homepage = "https://github.com/OmarBELK/agent-api-cookiecutter"
 
 [tool.ruff]
 exclude = [
